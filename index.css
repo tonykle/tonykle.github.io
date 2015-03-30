@@ -6,7 +6,7 @@
 }
 
 @font-face {
-    font-family: Raleway;
+    font-family: Raleway;font-family: Raleway;
     src: url(Raleway-Regular.ttf);
 }
 
@@ -14,6 +14,10 @@ html {
 	font-family: Quicksand, sans-serif;
 	color: #777777;
 	opacity: 0.4;
+}
+
+title {
+	 font-family: Helvetica;
 }
 
 a:visited, link {
