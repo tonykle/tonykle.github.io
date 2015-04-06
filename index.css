@@ -115,12 +115,6 @@ html {
 	margin-right: auto;
 }
 
-#dsaDescrip, #infoVisDescrip, #webDescrip, #rdDescrip, #accDescrip, #spDescrip, #dbDescrip {
-	display: none;
-	padding-left: 50px;
-	font-size: 10pt;
-}
-
 #entire {
 	text-align: center;	
 	text-decoration: none;
