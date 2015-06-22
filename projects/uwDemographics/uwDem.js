@@ -5,18 +5,6 @@
 (function (){
 	"use strict";
 
-	 $(document).ready(function () {
-        // change back link to blue on-hover
-        $("#goBack").mouseenter(function() {
-            $(this).css("color", "#4169E1");
-        });
-
-        // change back link back to black off-hover
-        $("#goBack").mouseleave(function() {
-            $(this).css("color", "black");
-        });
-    });
-
 	window.onload = function() {
 		change();
 

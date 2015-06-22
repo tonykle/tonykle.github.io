@@ -13,7 +13,7 @@ hr {
 
 html {
 	text-align: center;
-	font-family: Baskerville, sans-serif;
+	font-family: Arial;
 }
 
 #puzzlearea {
@@ -36,14 +36,6 @@ html {
 
 #controls {
 	padding-bottom: 50px;
-}
-
-#goBack {
-	font-size: 17pt;
-}
-
-#goBackCont {
-	text-align: right;
 }
 
 a {

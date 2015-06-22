@@ -26,7 +26,7 @@ html {
 	font-weight: 100;
 }
 
-#wireframe, #goBack {
+#wireframe {
 	
 	font-size: 13pt;
 }
@@ -142,10 +142,6 @@ a:visited, a {
 #wireframe, #imageAppear {
 	position: fixed; /*fixed to stay in one place while scrolling*/
 	text-align: left;
-}
-
-#goBackCont {
-	text-align: right;
 }
 
 .axis path, .axis line {
