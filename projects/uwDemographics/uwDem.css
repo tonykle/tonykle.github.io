@@ -1,0 +1,160 @@
+/* 
+Tony Le
+My CSS to style barProj.html
+*/
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;
+    margin-right: 4px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 23pt;
+	padding-bottom: 68px;
+	text-decoration: underline;
+	
+	font-weight: 100;
+	
+}
+
+html {
+	
+	font-family: "Helvetica Neue";
+	font-weight: 100;
+}
+
+#wireframe, #goBack {
+	
+	font-size: 13pt;
+}
+
+/*includes everything in 'body' except for the wireframe link*/
+h1, #ethnic, #tuition, #sources {
+	text-align: center;
+}
+
+rect {
+	shape-rendering: crispEdges; /*extra crispy*/
+}
+
+rect:hover {
+	fill: #4682B4;
+	-webkit-transition: all 0.3s;
+}
+
+#pieChartPH {
+	margin-top: 30px;
+	margin-bottom: 35px;
+}
+
+#barGraphPH {
+	margin-top: 30px;
+}
+
+h2, h3 {
+	font-size: 17pt;
+	font-weight: 100;
+}
+
+li {
+	font-size: 10pt;
+	
+}
+
+#easy {
+	margin-bottom: 150px;
+}
+
+path:hover {
+	fill: #CCFFFF;
+}
+
+#sources {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+	text-align: left;
+	font-size: 18pt;
+	
+}
+
+hr {
+	margin-top: 40px;
+	display: block; 
+	height: 1px;
+    border: 0; 
+    border-top: 1px solid #ccc;
+    margin: 1em 0; 
+    padding: 0; 
+}
+
+#sources li {
+	margin-left: 2px;
+	font-size: 12px;
+}
+
+#test {
+	position: relative;
+}
+
+#raceStats, #tuitionStats {
+	margin-top: 10px;
+	font-size: 13pt;
+	
+	clear: left;
+}
+
+#tuitionStats {
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+sup {
+	font-size: 9pt;
+}
+
+li sup {
+	font-size: 8pt;
+}
+
+#race {
+	
+	font-size: 16pt;
+}
+
+#tuition {
+	margin-top: 90px;
+}
+
+a {
+	text-decoration: none;
+	
+	font-size: 15pt;
+}
+
+a:visited, a {
+	color: black;
+}
+
+#wireframe, #imageAppear {
+	position: fixed; /*fixed to stay in one place while scrolling*/
+	text-align: left;
+}
+
+#goBackCont {
+	text-align: right;
+}
+
+.axis path, .axis line {
+	fill: none;
+	stroke: black;
+	stroke-width: 2px;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-size: 11px;
+}
