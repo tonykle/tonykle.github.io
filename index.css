@@ -14,6 +14,7 @@ html {
 	font-family: Quicksand, sans-serif;
 	color: #777777;
 	opacity: 0.4;
+	text-decoration: none;
 }
 
 a:visited, link {
@@ -22,7 +23,7 @@ a:visited, link {
 
 a:hover, a {
 	color: #777777;
-	text-decoration: underline;;
+
 }
 
 a {
@@ -70,39 +71,35 @@ hr {
 }
 
 #topsec {
-	margin-top: 2%;
-	font-size: 30pt;
+	font-size: 33pt;
 	font-weight: bold;
-	color: #696969;
+	color: black;
 	font-family: Raleway, serif;
-	margin-bottom: 0px;
-	font-style: italic;
-	padding-left: 40px;
-	padding-top: 25px;
-	width: 70%;
-	
-	margin-left: auto;
-	
-	margin-right: auto;
-
+	text-align: center;
+	margin-top: 3%;
+	margin-bottom: 6px;
 	/*makes header unselectable*/
 	-webkit-user-select: none; /* Chrome/Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
 }
 
- #projectsBut {
-	padding-top: 2%;
-	margin-right: 17%;
-	clear:left;
-	float: right;
+#projectsBut, #skillsetBut, #aboutMeBut {
+	font-size: 10.5pt;
+    margin:1px;
+    text-align:left;
+    display:inline-block;
+    margin-right: 9px;
+    text-decoration: none;
 }
 
-#skillsetBut, #aboutMeBut{
-	padding-top: 2%;
-	padding-right: 5%;
-	clear:left;
-	float: right;
+#jobTitle {
+	text-align: center;
+	margin-bottom: 23px;
+}
+
+#cont {
+	text-align:center;
 }
 
 ul {
@@ -135,8 +132,4 @@ html {
 
 .links {
 	padding-left: 50px;
-}
-
-.descrips {
-	text-decoration: underline;
 }
