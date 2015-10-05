@@ -90,7 +90,7 @@ hr {
     text-align:left;
     display:inline-block;
     margin-right: 9px;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #jobTitle {
