@@ -12,16 +12,15 @@
 		var w = 500; // width of svg canvas
 		var h = 375; // height of svg canvas
 		var barPadding = 2; // padding between each bar
+		var numb = 1;
 
         var xScale = d3.scale.linear()
-					 .domain([0, d3.max(dataset, function(d) { return d[0]; })])
+					 .domain([100, 200])
 					 .range([barPadding, w - barPadding * 2]);
 
         // for the x-avis
         // for some reason adding ticks() messes it up
-		var xAxis = d3.svg.axis()
-			.scale(xScale)
-			.orient("bottom"); // makes the side of axis lines point up or down |____| = up
+
 			
 		var svg = d3.select("#barGraphPH")
 					.append("svg") // svg w=500, h=375 ** think of SVG as a blank canvas that you paint on
@@ -32,7 +31,7 @@
 		   .data(dataset)
 		   .enter()
 		   .append("rect")
-
+		   .attr("id", numb)
 		   .attr("x", function(d, i) {
 		   		return i * (w / dataset.length);
 		   })
@@ -41,13 +40,12 @@
 		   		return h - (d * 35); // makes the graph flip to appear "correct" (instead of upside down)
 		   })
 		   .attr("fill", function(d) {
-		   		return "teal";
+		   		return "black";
 		   })
 		   .attr("width", w / dataset.length - barPadding)
 		   .attr("height", function(d) { // how far bars go down, from top to bottom
 		   		return (d * 35) - 10; // 30 used to be 4 -- d * x --> changes histogram scale
 		   });
-
 		svg.selectAll("text")
 		   .data(dataset)
 		   .enter()
@@ -74,14 +72,38 @@
 				// increasing 0 pushes the axis to the right
 				// increase 5 in order to move the axis upwards
 				// think = translate(x, y)
-				.attr("transform", "translate(0," + (h - barPadding - 5) + ")")
-				.call(xAxis);
+				.attr("class", "axis")
+				.attr("transform", "translate(0," + (h - barPadding - 5) + ")");
 
-		// var test = svg.selectAll("rect") 
-
-		//     .on('mouseover', function(d){ 
-		//     	console.log("hello");
-		//     })
+		var test = svg.selectAll("rect") 
+		    .on('mouseover', function(d){ 
+		    	console.log(d);
+		    	if (d == 4.6) {
+		    		document.getElementById("year").innerHTML = "1999";
+		    	} else if (d == 4.7) {
+		    		document.getElementById("year").innerHTML = "2000";
+		    	} else if (d == 4.9) {
+		    		document.getElementById("year").innerHTML = "2001";
+		    	} else if (d == 5.5) {
+		    		document.getElementById("year").innerHTML = "2002";
+		    	} else if (d == 5.8) {
+		 		    document.getElementById("year").innerHTML = "2003";   		
+		    	} else if (d == 6) {
+		    		document.getElementById("year").innerHTML = "2004";		
+		    	} else if (d == 6.1) {
+		    		document.getElementById("year").innerHTML = "2005";
+		    	} else if (d == 6.4) {
+		    		document.getElementById("year").innerHTML = "2006";
+		    	} else if (d == 6.5) {
+		    		document.getElementById("year").innerHTML = "2007";
+		    	} else if (d == 7) {
+		    		document.getElementById("year").innerHTML = "2008";
+		    	} else if (d == 7.9) {
+		    		document.getElementById("year").innerHTML = "2009";
+		    	} else if (d == 8.9) {
+		    		document.getElementById("year").innerHTML = "2010";	
+		    	}
+		    })
 
 		/////////////////////////////////////
 		/////////////////////////////////////

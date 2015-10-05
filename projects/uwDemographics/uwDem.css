@@ -15,15 +15,18 @@ h1 {
 	font-size: 23pt;
 	padding-bottom: 68px;
 	text-decoration: underline;
-	
 	font-weight: 100;
-	
 }
 
 html {
 	
-	font-family: "Helvetica Neue";
+	font-family: Raleway;
 	font-weight: 100;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Regular.ttf);
 }
 
 #wireframe {
@@ -41,7 +44,7 @@ rect {
 }
 
 rect:hover {
-	fill: #4682B4;
+	fill: #2B2B35;
 	-webkit-transition: all 0.3s;
 }
 
@@ -51,7 +54,7 @@ rect:hover {
 }
 
 #barGraphPH {
-	margin-top: 30px;
+	margin-top: 0px;
 }
 
 h2, h3 {
@@ -142,6 +145,11 @@ a:visited, a {
 #wireframe, #imageAppear {
 	position: fixed; /*fixed to stay in one place while scrolling*/
 	text-align: left;
+}
+
+#year {
+	font-size: 50pt;
+	height: 30pt;
 }
 
 .axis path, .axis line {
