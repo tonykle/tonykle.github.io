@@ -71,13 +71,13 @@ function drawMarkersInfoWindow(image) {
 			});
 			// populating the Info window with the image, artist, and location
 			marker.info = new google.maps.InfoWindow({
-	     		content:"<b>" + image.title + "</b> <br />" + "<img src=" + image.link + "> <br />" + 
-	     		image.artistName + "&nbsp; | &nbsp;" + image.location + "<br />" + image.likes + " likes <br />" + 
+	     		content:"<b>" + image.title + "</b> <br />" + "<img src=" + image.link + "> <br />" +
+	     		image.artistName + "&nbsp; | &nbsp;" + image.location + "<br />" + image.likes + " likes <br />" +
 	     		"<a href=" + image.website + ">" + image.website + "</a>"
 	     	});
 	     	// opens Info window on-click
 	     	google.maps.event.addListener(marker, 'click', function() { // opens info window when you click
-	     		marker.info.open(map, marker);		
+	     		marker.info.open(map, marker);
 			});
 		} else {
 			// console.log(address + " does not work"); // countries that do not work are duplicates, find way to display duplicates
