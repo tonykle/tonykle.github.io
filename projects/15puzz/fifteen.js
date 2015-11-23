@@ -8,19 +8,18 @@
 	"use strict";
 	var topB = 300 + "px"; // top value for blank space
 	var leftB = 300 + "px"; // left value for blank space
-	var randomImg;
+	var randomImg = Math.floor((Math.random() * 9) + 1);
 	window.onload = function() {
-		randomImg = Math.floor((Math.random() * 9) + 1);
 		createTiles();
 		document.getElementById("shufflebutton").onclick = shuffleIt;
 	};
-	
+
 	// this function creates the tiles of the puzzle and sets their background images
 	function createTiles() {
-		var x = 0;
-		var y = 0;
-		for (var i = 0; i < 15; i++) {
-			var newDiv = document.createElement("div");
+		let x = 0;
+		let y = 0;
+		for (let i = 0; i < 15; i++) {
+			let newDiv = document.createElement("div");
 			newDiv.innerHTML = [i + 1];
 			x = parseInt(i % 4);
 			y = parseInt(i / 4);
@@ -38,12 +37,12 @@
 
 	// this function randomly shuffles all of the puzzle pieces
 	function shuffleIt() {
-		for(var i = 0; i < 1993; i++) {
-			var randTile = Math.floor((Math.random() * 15) + 1); // random # (1-15)
-			var piece = document.getElementById("piece " + randTile); // this is the piece you randomly got
-			var pieceLeft = piece.style.left; // the left val of the randomly selected piece
-			var pieceTop = piece.style.top; // the top val of the randomly selected piece
-			if (validate(piece.style.top, piece.style.left)) { 
+		for(let i = 0; i < 1000; i++) {
+			let randTile = Math.floor((Math.random() * 15) + 1); // random # (1-15)
+			let piece = document.getElementById("piece " + randTile); // this is the piece you randomly got
+			let pieceLeft = piece.style.left; // the left val of the randomly selected piece
+			let pieceTop = piece.style.top; // the top val of the randomly selected piece
+			if (validate(piece.style.top, piece.style.left)) {
 				piece.style.left = leftB; // following lines switches positioning
 				piece.style.top = topB;
 				leftB = pieceLeft;
@@ -54,22 +53,19 @@
 
 	// this function makes sure a puzzle piece we want to move is movable
 	function validate(top, left) {
-		var topBlank = parseInt(topB); // top value of blank piece
-		var leftBlank = parseInt(leftB); // left balue of blank piece
-		var tCurr = parseInt(top); // top value of current piece
-		var lCurr = parseInt(left); // left value of current piece
-		if ((((tCurr - topBlank == 100) || (tCurr - topBlank == -100)) && (lCurr - leftBlank == 0)) || 
-			(((lCurr - leftBlank == 100) || (lCurr - leftBlank == -100)) && (tCurr - topBlank == 0))) {
-			return true;
-		} 
-		return false;
+		let topBlank = parseInt(topB); // top value of blank piece
+		let leftBlank = parseInt(leftB); // left balue of blank piece
+		let tCurr = parseInt(top); // top value of current piece
+		let lCurr = parseInt(left); // left value of current piece
+		return ((((tCurr - topBlank == 100) || (tCurr - topBlank == -100)) && (lCurr - leftBlank == 0)) ||
+			(((lCurr - leftBlank == 100) || (lCurr - leftBlank == -100)) && (tCurr - topBlank == 0)));
 	}
 
 	// this function allows us to move tiles one at a time
 	function moveTile() {
 		if (validate(this.style.top, this.style.left)) {
-			var tempTop =  this.style.top;
-			var tempLeft = this.style.left;
+			let tempTop =  this.style.top;
+			let tempLeft = this.style.left;
 			this.style.top = topB;
 			this.style.left = leftB;
 			topB = tempTop;
