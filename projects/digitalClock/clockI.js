@@ -5,10 +5,12 @@
 	"use strict";
 
 	const circleColor = "background-color: #FFEBCD"; // Blanched Almond
+	const height = 6;
+	const width = 17;
 	var hours;
 	var firstMin; // if min == 36, firstMin == 3
 	var secMin; // if min == 36, secMin == 6
-	var flip = 0; // for the blinker
+	var flip = false; // for the blinker
 	var firstMinIsOne = false;
 
 	window.onload = function() {
@@ -39,8 +41,8 @@
 
 	// this function creates the circles and fills them depending on
 	function createCircles() {
-		for (let j = 0; j < 6; j++) {
-			for (let i = 0; i < 17; i++) {
+		for (let j = 0; j < height; j++) {
+			for (let i = 0; i < width; i++) {
 			  let newTd = document.createElement("td");
 				let newTDName = "td_" + (i + 1); // table data
 
@@ -61,8 +63,8 @@
 
 	// this function clears all current circles, and redraws them when the correct time changes
 	function clearAndRedraw() {
-		for (let j = 0; j < 6; j++) {
-			for (let i = 0; i < 17; i++) {
+		for (let j = 0; j < height; j++) {
+			for (let i = 0; i < width; i++) {
 				$("#" + (j + 1) + "_" + (i + 1)).attr("style", "black"); // div class = circle, div id = 1_1, 1_2
 			}
 		}
@@ -330,8 +332,8 @@
 
 	// this function controls the flashing blinker
 	function blinker() {
-		flip++;
-		if (flip % 2 !== 0) {
+		flip = !flip;
+		if (flip) {
 			$("#2_9, #4_9").attr("style", circleColor);
 		} else {
 			$("#2_9, #4_9").attr("style", "black");
