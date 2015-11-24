@@ -1,4 +1,4 @@
-/* 
+/*
 Tony Le
 Desc: This file will provide the styling for the fifteen.html webpage with CSS.
 */
@@ -13,7 +13,7 @@ hr {
 
 html {
 	text-align: center;
-	font-family: Arial;
+	font-family: Helvetica;
 }
 
 #puzzlearea {
@@ -40,12 +40,9 @@ html {
 
 a {
 	text-decoration: none;
-	font-weight: bold;
 	font-size: 15pt;
 }
 
 a:visited, a {
 	color: black;
 }
-
-
