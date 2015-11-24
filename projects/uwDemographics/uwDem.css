@@ -1,4 +1,4 @@
-/* 
+/*
 Tony Le
 My CSS to style barProj.html
 */
@@ -19,18 +19,13 @@ h1 {
 }
 
 html {
-	
-	font-family: Raleway;
+
+	font-family: helvetica;
 	font-weight: 100;
 }
 
-@font-face {
-    font-family: Raleway;
-    src: url(Raleway-Regular.ttf);
-}
-
 #wireframe {
-	
+
 	font-size: 13pt;
 }
 
@@ -64,7 +59,7 @@ h2, h3 {
 
 li {
 	font-size: 10pt;
-	
+
 }
 
 #easy {
@@ -81,17 +76,17 @@ path:hover {
 	margin-bottom: 30px;
 	text-align: left;
 	font-size: 18pt;
-	
+
 }
 
 hr {
 	margin-top: 40px;
-	display: block; 
+	display: block;
 	height: 1px;
-    border: 0; 
+    border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0; 
-    padding: 0; 
+    margin: 1em 0;
+    padding: 0;
 }
 
 #sources li {
@@ -106,7 +101,7 @@ hr {
 #raceStats, #tuitionStats {
 	margin-top: 10px;
 	font-size: 13pt;
-	
+
 	clear: left;
 }
 
@@ -124,7 +119,7 @@ li sup {
 }
 
 #race {
-	
+
 	font-size: 16pt;
 }
 
@@ -134,7 +129,7 @@ li sup {
 
 a {
 	text-decoration: none;
-	
+
 	font-size: 15pt;
 }
 

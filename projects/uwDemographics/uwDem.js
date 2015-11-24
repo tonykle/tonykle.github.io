@@ -192,6 +192,6 @@
 	// closes the wireframe when wireframe is no longer hovered over
 	function close() {
 		document.getElementById("imageAppear").src = "";
-		document.getElementById("wireframe").innerHTML = "view wireframe here &#8618";
+		document.getElementById("wireframe").innerHTML = "view wireframe here";
 	}
 })();
