@@ -4,16 +4,16 @@
 (function () {
 	"use strict";
 
-	const circleColor = "background-color: #FFEBCD"; // Blanched Almond
-	const height = 6;
-	const width = 17;
+	const CIRCLE_COLOR = "background-color: #FFEBCD"; // Blanched Almond
+	const HEIGHT = 6;
+	const WIDTH = 17;
 	var hours;
 	var firstMin; // if min == 36, firstMin == 3
 	var secMin; // if min == 36, secMin == 6
-	var flip = false; // for the blinker
+	var flip = 0; // for the blinker
 	var firstMinIsOne = false;
 
-	window.onload = function() {
+	window.onload = () => {
 		createCircles();
 		getTheTime();
 		setInterval(() => {
@@ -33,6 +33,7 @@
 		} else if (hours === 0) {
 		   hours = 12;
 		}
+
 		let minutes = date.getMinutes(); // minutes
 		secMin = minutes % 10;
 		firstMin = (minutes - secMin) / 10;
@@ -41,8 +42,8 @@
 
 	// this function creates the circles and fills them depending on
 	function createCircles() {
-		for (let j = 0; j < height; j++) {
-			for (let i = 0; i < width; i++) {
+		for (let j = 0; j < HEIGHT; j++) {
+			for (let i = 0; i < WIDTH; i++) {
 			  let newTd = document.createElement("td");
 				let newTDName = "td_" + (i + 1); // table data
 
@@ -63,8 +64,8 @@
 
 	// this function clears all current circles, and redraws them when the correct time changes
 	function clearAndRedraw() {
-		for (let j = 0; j < height; j++) {
-			for (let i = 0; i < width; i++) {
+		for (let j = 0; j < HEIGHT; j++) {
+			for (let i = 0; i < WIDTH; i++) {
 				$("#" + (j + 1) + "_" + (i + 1)).attr("style", "black"); // div class = circle, div id = 1_1, 1_2
 			}
 		}
@@ -214,11 +215,11 @@
 		middleThree(startNumber);
 
 		// last dot on the left
-		$("#4_" + startNumber).attr("style", circleColor);
+		$("#4_" + startNumber).attr("style", CIRCLE_COLOR);
 
 		// last dot on the right
 		let newNumb2 = startNumber + 2;
-		$("#2_" + newNumb2).attr("style", circleColor);
+		$("#2_" + newNumb2).attr("style", CIRCLE_COLOR);
 	}
 
 	// DISPLAY 3
@@ -236,7 +237,7 @@
 
 		// short side (left)
 		for (let i = 1; i < 4; i++) {
-			$("#" + i + "_" + startNumber).attr("style", circleColor);
+			$("#" + i + "_" + startNumber).attr("style", CIRCLE_COLOR);
 		}
 	}
 
@@ -246,11 +247,11 @@
 		bottomThree(startNumber);
 		middleThree(startNumber);
 		// last dot on the left side
-		$("#2_" + startNumber).attr("style", circleColor);
+		$("#2_" + startNumber).attr("style", CIRCLE_COLOR);
 
 		// last dot on the right side
 		let newNumb = startNumber + 2;
-		$("#4_" + newNumb).attr("style", circleColor);
+		$("#4_" + newNumb).attr("style", CIRCLE_COLOR);
 	}
 
 	// DISPLAY 6
@@ -262,7 +263,7 @@
 
 		// last dot on the right side
 		let newNumb = startNumber + 2;
-		$("#4_" + newNumb).attr("style", circleColor);
+		$("#4_" + newNumb).attr("style", CIRCLE_COLOR);
 	}
 
 	// DISPLAY 7
@@ -289,7 +290,7 @@
 
 		// short side (left)
 		for (let i = 1; i < 4; i++) {
-			$("#" + i + "_" + startNumber).attr("style", circleColor);
+			$("#" + i + "_" + startNumber).attr("style", CIRCLE_COLOR);
 		}
 	}
 
@@ -299,42 +300,42 @@
 	function topThree(startNumber) {
 		for (let i = 0; i < 3; i++) {
 			let newNumb = startNumber + i;
-			$("#1_" + newNumb).attr("style", circleColor);
+			$("#1_" + newNumb).attr("style", CIRCLE_COLOR);
 		}
 	}
 
 	function bottomThree(startNumber) {
 		for (let i = 0; i < 3; i++) {
 			let newNumb = startNumber + i;
-			$("#5_" + newNumb).attr("style", circleColor);
+			$("#5_" + newNumb).attr("style", CIRCLE_COLOR);
 		}
 	}
 
 	function longSideLeft(startNumber) {
 		for (let i = 1; i < 6; i++) {
-			$("#" + i + "_" + startNumber).attr("style", circleColor);
+			$("#" + i + "_" + startNumber).attr("style", CIRCLE_COLOR);
 		}
 	}
 
 	function longSideRight(startNumber) {
 		for (let i = 1; i < 6; i++) {
 			let newNumb = startNumber + 2;
-			$("#" + i + "_" + newNumb).attr("style", circleColor);
+			$("#" + i + "_" + newNumb).attr("style", CIRCLE_COLOR);
 		}
 	}
 
 	function middleThree(startNumber) {
 		for (let i = 0; i < 3; i++) {
 			let newNumb = startNumber + i;
-			$("#3_" + newNumb).attr("style", circleColor);
+			$("#3_" + newNumb).attr("style", CIRCLE_COLOR);
 		}
 	}
 
 	// this function controls the flashing blinker
 	function blinker() {
-		flip = !flip;
-		if (flip) {
-			$("#2_9, #4_9").attr("style", circleColor);
+		flip++;
+		if (flip % 2 !== 0) {
+			$("#2_9, #4_9").attr("style", CIRCLE_COLOR);
 		} else {
 			$("#2_9, #4_9").attr("style", "black");
 		}
