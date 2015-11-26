@@ -1,8 +1,8 @@
 /* This is the CSS file I use to style my portfolio */
 
 @font-face {
-    font-family: Quicksand;
-    src: url(Quicksand-Regular.otf);
+  font-family: Quicksand;
+  src: url(Quicksand-Regular.otf);
 }
 
 @font-face {
@@ -37,11 +37,11 @@ body {
 hr {
 	/*display: block; */
 	height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin-top: 20pt;
-    margin-bottom: 15pt;
-    padding:0px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-top: 20pt;
+  margin-bottom: 15pt;
+  padding:0px;
 }
 
 /*.shorter {
@@ -50,7 +50,7 @@ hr {
 }*/
 
 #topOne {
-	width:68%;
+  width:50%;
 }
 
 #resume {
@@ -62,7 +62,7 @@ hr {
 	padding-left: 40px;
 	padding-top: 25px;
 	padding-bottom: 25px;
-	width: 70%;
+	width: 50%;
 	margin-bottom: 20pt;
 	margin-left: auto;
 	clear: right;
@@ -85,11 +85,11 @@ hr {
 
 #projectsBut, #skillsetBut, #aboutMeBut {
 	font-size: 10.5pt;
-    margin:1px;
-    text-align:left;
-    display:inline-block;
-    margin-right: 9px;
-    text-decoration: underline;
+  margin:1px;
+  text-align:left;
+  display:inline-block;
+  margin-right: 9px;
+  text-decoration: underline;
 }
 
 #jobTitle {
