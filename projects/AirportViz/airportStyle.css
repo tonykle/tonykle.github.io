@@ -5,21 +5,21 @@ html {
 
 .airportContainers {
   outline-style:solid;
-  outline-width: 6.5px;
+  outline-width: 7.5px;
   outline-color:#3fb0ac;
   width: 230px;
   height: 230px;
   padding-left: 10px;
   padding-right: 10px;
-  margin: auto 35px 35px auto;
+  margin: auto 40px 40px auto;
   background-color: #173e43;
+  float: left;
 }
 
 h3 {
   font-size: 46pt;
   text-align: right;
-  margin-bottom: 40px;
-  margin-top: 10px;
+  margin: 10px auto 35px auto;
   color: #fae596;
 }
 
@@ -31,6 +31,26 @@ div div {
 #area {
   margin: 0 auto;
   width: 900px;
-  margin-top: 5%;
+}
 
+body {
+  margin-top: 90px;
+}
+
+#info {
+  float: left;
+  text-align: left;
+  width: 12%;
+  color: white;
+  margin-left: 20px;
+  color: #dddfd4;
+}
+
+img {
+  clear: both;
+  position: relative;
+}
+
+a {
+  color: grey;
 }

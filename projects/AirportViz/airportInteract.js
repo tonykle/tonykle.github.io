@@ -1,6 +1,8 @@
 'use strict';
 
-var count = 0;
+const ROW_LENGTH = 3; // how many boxes are to be in each row
+let count = 0; // count to create unique IDs and to properly format boxes
+
 $(document).ready(function() {
   const AIRPORT_LIST = ['SFO', 'LAX', 'JFK', 'ATL', 'MIA', 'AUS', 'BOS', 'ORD', 'PDX']; // used for URL in ajax
   AIRPORT_LIST.forEach(airportName => {
@@ -14,13 +16,16 @@ function initializeAirports(airportName, createAirports) {
   $.ajax({
     type: 'GET',
     url: airportName,
-    data: {},
+    data: {}, //
     dataType: 'jsonp',
-    success: createAirports
+    success: createAirports,
+    error: function(e) {
+      console.log("Sorry - one of the airports' data could not be loaded.");
+    }
   })
 }
 
-// this function creates airport objects and adds them to an array
+// this function creates and uses airport objects to create boxes with live airport information
 function createAirports(data) {
   let airport = {
     abbrev : data.IATA,
@@ -30,33 +35,38 @@ function createAirports(data) {
     temp : data.weather.temp,
     updated: "Last Updated: " + data.weather.meta.updated
   }
+
   let airportCurr = document.createElement("div");
   $(airportCurr)
-    .attr("id", airport.abbrev + "1")
+    .attr("id", airport.abbrev + count + "")
     .attr("class", "airportContainers");
-  if (count % 3 == 0) {
-    $(airportCurr).css("clear", "both");
-  }
-  $(airportCurr).css("float", "left");
 
+  // airport box outline becomes thicker and red if there is a delay
+  if (airport.status != "No known delays for this airport") {
+    $("#" + airport.abbrev + count)
+      .css("outline-color", "#ef3d47")
+      .css("outline-width", "9px");
+  }
+
+  // 3 x 3 box layout
+  if (count % ROW_LENGTH === 0) {
+    $(airportCurr).css("clear", "right");
+  }
   $("#area").append(airportCurr);
 
   Object.getOwnPropertyNames(airport).forEach(val => {
     let airPortProp;
-    if (val == "abbrev") {
+    // title of each box
+    if (val === "abbrev") {
       airPortProp = document.createElement("h3");
     } else {
       airPortProp = document.createElement("div");
     }
 
-    // airport box becomes red if there is a delay
-    if (airport.status != "No known delays for this airport") {
-      $("#" + airport.abbrev + "1").css("background-color", "#ef3d47");
-    }
     $(airPortProp)
       .attr("id", val)
       .html(airport[val]);
-    $("#" + airport.abbrev + "1").append(airPortProp);
+    $("#" + airport.abbrev + count).append(airPortProp);
   });
   count++;
 }
