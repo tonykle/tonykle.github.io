@@ -132,3 +132,7 @@ html {
 .links {
 	padding-left: 50px;
 }
+
+.descrips {
+  text-decoration: underline;
+}

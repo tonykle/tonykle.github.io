@@ -5,7 +5,7 @@ html {
 .airportContainers {
   margin-bottom: 30px;
   outline-style:solid;
-  outline-width: 6px;
+  outline-width: 6.5px;
   outline-color:black;
   width: 230px;
   height: 230px;
@@ -14,7 +14,11 @@ html {
 }
 
 h3 {
-  font-size: 44pt;
+  font-size: 42pt;
   text-align: right;
   margin-bottom: 35px;
+}
+
+div div {
+  font-size: 11pt;
 }
