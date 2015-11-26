@@ -1,9 +1,9 @@
 html {
   font-family: Helvetica;
+
 }
 
 .airportContainers {
-  margin-bottom: 30px;
   outline-style:solid;
   outline-width: 6.5px;
   outline-color:black;
@@ -11,14 +11,25 @@ html {
   height: 230px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-right: 35px;
+  margin-bottom: 35px;
+
 }
 
 h3 {
-  font-size: 42pt;
+  font-size: 44pt;
   text-align: right;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 div div {
   font-size: 11pt;
+}
+
+#area {
+  margin: 0 auto;
+  width: 900px;
+  margin-top: 5%;
+
 }

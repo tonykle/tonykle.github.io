@@ -1,7 +1,8 @@
 'use strict';
 
+var count = 0;
 $(document).ready(function() {
-  const AIRPORT_LIST = ['SFO', 'LAX', 'PHX', 'JFK', 'ATL', 'MIA', 'AUS', 'BOS', 'CLE', 'ORD', 'PDX']; // used for URL in ajax
+  const AIRPORT_LIST = ['SFO', 'LAX', 'JFK', 'ATL', 'MIA', 'AUS', 'BOS', 'ORD', 'PDX']; // used for URL in ajax
   AIRPORT_LIST.forEach(airportName => {
     let urlCurr = 'http://services.faa.gov/airport/status/' + airportName + '?format=application/json';
     initializeAirports(urlCurr, createAirports);
@@ -21,7 +22,6 @@ function initializeAirports(airportName, createAirports) {
 
 // this function creates airport objects and adds them to an array
 function createAirports(data) {
-  console.log(data);
   let airport = {
     abbrev : data.IATA,
     fullName : data.name,
@@ -34,6 +34,11 @@ function createAirports(data) {
   $(airportCurr)
     .attr("id", airport.abbrev + "1")
     .attr("class", "airportContainers");
+  if (count % 3 == 0) {
+    $(airportCurr).css("clear", "both");
+  }
+  $(airportCurr).css("float", "left");
+
   $("#area").append(airportCurr);
 
   Object.getOwnPropertyNames(airport).forEach(val => {
@@ -44,15 +49,14 @@ function createAirports(data) {
       airPortProp = document.createElement("div");
     }
 
-    if (airport.status != "No known delays for this airport.") {
-      $("#" + airport.abbrev + "1").css("background-color", "white");
-    } else {
-      $("#" + airport.abbrev + "1").css("background-color", "#00CD00");
+    // airport box becomes red if there is a delay
+    if (airport.status != "No known delays for this airport") {
+      $("#" + airport.abbrev + "1").css("background-color", "#ef3d47");
     }
-
     $(airPortProp)
       .attr("id", val)
       .html(airport[val]);
     $("#" + airport.abbrev + "1").append(airPortProp);
   });
+  count++;
 }
