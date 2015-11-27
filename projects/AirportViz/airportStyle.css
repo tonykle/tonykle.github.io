@@ -24,7 +24,6 @@ h3 {
 }
 
 div div {
-  font-size: 11pt;
   color: #dddfd4;
 }
 
@@ -44,6 +43,10 @@ body {
   color: white;
   margin-left: 20px;
   color: #dddfd4;
+}
+
+#info, div div {
+  font-size: 11pt;
 }
 
 img {

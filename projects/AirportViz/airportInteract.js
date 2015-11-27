@@ -7,12 +7,12 @@ $(document).ready(function() {
   const AIRPORT_LIST = ['SFO', 'LAX', 'JFK', 'ATL', 'MIA', 'AUS', 'BOS', 'ORD', 'PDX']; // used for URL in ajax
   AIRPORT_LIST.forEach(airportName => {
     let urlCurr = 'http://services.faa.gov/airport/status/' + airportName + '?format=application/json';
-    initializeAirports(urlCurr, createAirports);
+    initializeAirports(urlCurr);
   })
 });
 
 // ajax calls to receive JSON data
-function initializeAirports(airportName, createAirports) {
+function initializeAirports(airportName) {
   $.ajax({
     type: 'GET',
     url: airportName,
@@ -41,6 +41,8 @@ function createAirports(data) {
     .attr("id", airport.abbrev + count + "")
     .attr("class", "airportContainers");
 
+  $("#area").append(airportCurr);
+
   // airport box outline becomes thicker and red if there is a delay
   if (airport.status != "No known delays for this airport") {
     $("#" + airport.abbrev + count)
@@ -52,7 +54,6 @@ function createAirports(data) {
   if (count % ROW_LENGTH === 0) {
     $(airportCurr).css("clear", "right");
   }
-  $("#area").append(airportCurr);
 
   Object.getOwnPropertyNames(airport).forEach(val => {
     let airPortProp;
