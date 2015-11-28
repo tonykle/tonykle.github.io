@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: Quicksand;
-  src: url(Quicksand-Regular.otf);
+  src: url(fonts/Quicksand-Regular.otf);
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(Raleway-Regular.ttf);
+    src: url(fonts/Raleway-Regular.ttf);
 }
 
 html {

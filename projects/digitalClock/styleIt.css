@@ -1,5 +1,5 @@
-/* 
-This style sheet stylizes the digital clock 
+/*
+This style sheet stylizes the digital clock
 - Tony Le
 */
 
@@ -9,7 +9,7 @@ This style sheet stylizes the digital clock
     height: 30px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
-    border-radius: 25px; 
+    border-radius: 25px;
     border: solid 1px #3a3a3a;
     color: yellow;
     margin-bottom: 7px; /*adds space below each circle*/
@@ -24,12 +24,12 @@ html {
 /*specify font family*/
 @font-face {
     font-family: RobotoSlab;
-    src: url(RobotoSlab-Thin.ttf);
+    src: url(../../fonts/RobotoSlab-Thin.ttf);
 }
 
 #clockContainer {
 	width: 50%;
-	margin: 0 auto;	
+	margin: 0 auto;
 	margin-top: 10%;
 }
 
@@ -58,4 +58,3 @@ h2 {
     width:100%;
     text-align: center;
 }
-

@@ -334,7 +334,7 @@
 	// this function controls the flashing blinker
 	function blinker() {
 		flip++;
-		if (flip % 2 !== 0) {
+		if (flip % 2 != 0) {
 			$("#2_9, #4_9").attr("style", CIRCLE_COLOR);
 		} else {
 			$("#2_9, #4_9").attr("style", "black");
