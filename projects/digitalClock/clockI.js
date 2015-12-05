@@ -84,24 +84,34 @@
 				zero(1);
 			}
 		// fill second number slot w/ a number (1-9)
-		if (hours == 1) {
-			one(7); // fill 1-7 to 2-7 (vertically)
-		} else if (hours === 2) {
-			two(5);
-		} else if (hours === 3) {
-			three(5);
-		}  else if (hours === 4) {
-			four(5);
-		}  else if (hours === 5) {
-			five(5);
-		}  else if (hours === 6) {
-			six(5);
-		}  else if (hours === 7) {
-			seven(5);
-		}  else if (hours === 8) {
-			eight(5);
-		}  else if (hours === 9) {
-			nine(5);
+		switch (hours) {
+			case 1:
+				one(7);
+				break;
+			case 2:
+				two(5);
+				break;
+			case 3:
+				three(5);
+				break;
+			case 4:
+				four(5);
+				break;
+			case 5:
+				five(5);
+				break;
+			case 6:
+				six(5);
+				break;
+			case 7:
+				seven(5);
+				break;
+			case 8:
+				eight(5);
+				break;
+			case 9:
+				nine(5);
+				break;
 		}
 
 		} else { // fill number slot #1 with 10/11/12
@@ -126,70 +136,103 @@
 		if (firstMin === 1) {
 			one(11); // fill 1-7 to 2-7 (vertically)
 			// fill second minute number slot depending on value
-			if (secMin === 1) {
-				one(13); // fill 1-7 to 2-7 (vertically)
-			} else if (secMin === 2) {
-				two(13);
-			} else if (secMin === 3) {
-				three(13);
-			}  else if (secMin === 4) {
-				four(13);
-			}  else if (secMin === 5) {
-				five(13);
-			}  else if (secMin === 6) {
-				six(13);
-			}  else if (secMin === 7) {
-				seven(13);
-			}  else if (secMin === 8) {
-				eight(13);
-			}  else if (secMin === 9) {
-				nine(13);
-			} else if (secMin === 0) {
-				zero(13);
+			switch (secMin) {
+				case 1:
+					one(13);
+					break;
+				case 2:
+					two(13);
+					break;
+				case 3:
+					three(13);
+					break;
+				case 4:
+					four(13);
+					break;
+				case 5:
+					five(13);
+					break;
+				case 6:
+					six(13);
+					break;
+				case 7:
+					seven(13);
+					break;
+				case 8:
+					eight(13);
+					break;
+				case 9:
+					nine(13);
+					break;
+				case 0:
+					zero(13);
+					break;
 			}
 			firstMinIsOne = true;
-		} else if (firstMin === 2) {
-			two(11);
-		} else if (firstMin === 3) {
-			three(11);
-		}  else if (firstMin === 4) {
-			four(11);
-		}  else if (firstMin === 5) {
-			five(11);
-		}  else if (firstMin === 6) {
-			six(11);
-		}  else if (firstMin === 7) {
-			seven(11);
-		}  else if (firstMin === 8) {
-			eight(11);
-		}  else if (firstMin === 9) {
-			nine(11);
-		} else if (firstMin === 0) {
-			zero(11);
+		}
+		switch (firstMin) {
+			case 2:
+				two(11);
+				break;
+			case 3:
+				three(11);
+				break;
+			case 4:
+				four(11);
+				break;
+			case 5:
+				five(11);
+				break;
+			case 6:
+				six(11);
+				break;
+			case 7:
+				seven(11);
+				break;
+			case 8:
+				eight(11);
+				break;
+			case 9:
+				nine(11);
+				break;
+			case 0:
+				zero(11);
+				break;
 		}
 
 		// fill second minute number slot depending on value
 		if (!firstMinIsOne) {
-			if (secMin === 1) {
-				one(15); // fill 1-7 to 2-7 (vertically)
-			} else if (secMin === 2) {
-				two(15);
-			} else if (secMin === 3) {
-				three(15);
-			}  else if (secMin === 4) {
-				four(15);
-			}  else if (secMin === 5) {
-				five(15);
-			}  else if (secMin === 6) {
-				six(15);
-			}  else if (secMin === 7) {
-				seven(15);
-			}  else if (secMin === 8) {
-				eight(15);
-			}  else if (secMin === 9) {
-				nine(15);
-			} else if (secMin === 0) {
-				zero(15);
+			switch (secMin) {
+				case 1:
+					one(15);
+					break;
+				case 2:
+					two(15);
+					break;
+				case 3:
+					three(15);
+					break;
+				case 4:
+					four(15);
+					break;
+				case 5:
+					five(15);
+					break;
+				case 6:
+					six(15);
+					break;
+				case 7:
+					seven(15);
+					break;
+				case 8:
+					eight(15);
+					break;
+				case 9:
+					nine(15);
+					break;
+				case 0:
+					zero(15);
+					break;
 			}
 		}
 		firstMinIsOne = false;
