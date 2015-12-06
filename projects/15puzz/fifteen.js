@@ -10,9 +10,10 @@
 	var topB = "300px"; // top value for blank space
 	var leftB = "300px"; // left value for blank space
 	var randomImg = Math.floor((Math.random() * 9) + 1);
+	var doc = document;
 	window.onload = function() {
 		createTiles();
-		document.getElementById("shufflebutton").onclick = shuffleIt;
+		doc.getElementById("shufflebutton").onclick = shuffleIt;
 	};
 
 	// this function creates the tiles of the puzzle and sets their background images
@@ -20,7 +21,7 @@
 		let x = 0;
 		let y = 0;
 		for (let i = 0; i < tilePieces; i++) {
-			let newDiv = document.createElement("div");
+			let newDiv = doc.createElement("div");
 			newDiv.innerHTML = [i + 1];
 			x = parseInt(i % 4);
 			y = parseInt(i / 4);
@@ -29,7 +30,7 @@
 			newDiv.style.top = (100 * y) + "px";
 			newDiv.style.backgroundPosition = (x * - 100) + "px " + (y * - 100) + "px";
 			newDiv.style.backgroundImage="url('images/background" + randomImg + ".jpg')"; // set background-image of each piece
-			document.getElementById("puzzlearea").appendChild(newDiv); // adds new div to puzzlearea
+			doc.getElementById("puzzlearea").appendChild(newDiv); // adds new div to puzzlearea
 			newDiv.onclick = moveTile; // moves a tile
 			newDiv.onmouseover = changeCursorColor; // changes cursor/color appearance
 			newDiv.onmouseout = changeCursorColorBack; // changes cursor/color appearance back
@@ -40,7 +41,7 @@
 	function shuffleIt() {
 		for(let i = 0; i < 1000; i++) {
 			let randTile = Math.floor((Math.random() * tilePieces) + 1); // random # (1-15)
-			let piece = document.getElementById("piece " + randTile); // this is the piece you randomly got
+			let piece = doc.getElementById("piece " + randTile); // this is the piece you randomly got
 			let pieceLeft = piece.style.left; // the left val of the randomly selected piece
 			let pieceTop = piece.style.top; // the top val of the randomly selected piece
 			if (validate(piece.style.top, piece.style.left)) {
