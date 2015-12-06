@@ -17,7 +17,7 @@
 		const xScale = d3.scale.linear() // for the x-axis
 			 .domain([100, 200])
 			 .range([barPadding, wTuit - barPadding * 2]);
-
+		let docElem = document;
 		var svg = d3.select("#barGraphPH")
 					.append("svg") // svg w=500, h=375 ** think of SVG as a blank canvas that you paint on
 					.attr("width", wTuit)
@@ -60,32 +60,46 @@
 				.attr("transform", "translate(0," + (hTuit - barPadding - 5) + ")");
 
 		const test = svg.selectAll("rect")
-		    .on('mouseover', function(d){
-		    	if (d === 4.6) {
-		    		document.getElementById("year").innerHTML = "1999";
-		    	} else if (d === 4.7) {
-		    		document.getElementById("year").innerHTML = "2000";
-		    	} else if (d === 4.9) {
-		    		document.getElementById("year").innerHTML = "2001";
-		    	} else if (d === 5.5) {
-		    		document.getElementById("year").innerHTML = "2002";
-		    	} else if (d === 5.8) {
-		 		    document.getElementById("year").innerHTML = "2003";
-		    	} else if (d === 6) {
-		    		document.getElementById("year").innerHTML = "2004";
-		    	} else if (d === 6.1) {
-		    		document.getElementById("year").innerHTML = "2005";
-		    	} else if (d === 6.4) {
-		    		document.getElementById("year").innerHTML = "2006";
-		    	} else if (d === 6.5) {
-		    		document.getElementById("year").innerHTML = "2007";
-		    	} else if (d === 7) {
-		    		document.getElementById("year").innerHTML = "2008";
-		    	} else if (d === 7.9) {
-		    		document.getElementById("year").innerHTML = "2009";
-		    	} else if (d === 8.9) {
-		    		document.getElementById("year").innerHTML = "2010";
-		    	}
+		    .on('mouseover', function(dataPoint){
+				  let year = docElem.getElementById("year");
+					switch (dataPoint) {
+						case 4.6:
+							year.innerHTML = "1999";
+							break;
+						case 4.7:
+							year.innerHTML = "2000";
+							break;
+						case 4.9:
+							year.innerHTML = "2001";
+							break;
+						case 5.5:
+							year.innerHTML = "2002";
+							break;
+						case 5.8:
+							year.innerHTML = "2003";
+							break;
+						case 6:
+							year.innerHTML = "2004";
+							break;
+						case 6.1:
+							year.innerHTML = "2005";
+							break;
+						case 6.4:
+							year.innerHTML = "2006";
+							break;
+						case 6.5:
+							year.innerHTML = "2007";
+							break;
+						case 7:
+							year.innerHTML = "2008";
+							break;
+						case 7.9:
+							year.innerHTML = "2009";
+							break;
+						case 8.9:
+							year.innerHTML = "2010";
+							break;
+					}
 		    })
 
 		/////////////////////////////////////
@@ -122,7 +136,6 @@
 			.attr("fill", (d, i) => color(i))
 			.attr("d", arc);
 
-		//////////////////////////////////////////////
 		//////////////////////////////////////////////
 		// uncomment below to include #s in pie graph
 
@@ -185,13 +198,13 @@
 
 	// openns the wireframe when text is hovered over
 	function open() {
-	 	document.getElementById("imageAppear").src = "http://i.imgur.com/ENNngny.jpg?1";
-	 	document.getElementById("wireframe").innerHTML = "";
+	 	docElem.getElementById("imageAppear").src = "http://i.imgur.com/ENNngny.jpg?1";
+	 	docElem.getElementById("wireframe").innerHTML = "";
 	}
 
 	// closes the wireframe when wireframe is no longer hovered over
 	function close() {
-		document.getElementById("imageAppear").src = "";
-		document.getElementById("wireframe").innerHTML = "view wireframe here";
+		docElem.getElementById("imageAppear").src = "";
+	  docElem.getElementById("wireframe").innerHTML = "view wireframe here";
 	}
 })();

@@ -35,8 +35,8 @@ function createAirports(data) {
     temp : data.weather.temp,
     updated: "Last Updated: " + data.weather.meta.updated
   }
-
-  let airportCurr = document.createElement("div");
+  let doc = document;
+  let airportCurr = doc.createElement("div");
   $(airportCurr)
     .attr("id", airport.abbrev + count + "")
     .attr("class", "airportContainers");
@@ -55,13 +55,13 @@ function createAirports(data) {
     $(airportCurr).css("clear", "right");
   }
 
+  // loop over all properties of airport objects
   Object.getOwnPropertyNames(airport).forEach(val => {
     let airPortProp;
-    // title of each box
     if (val === "abbrev") {
-      airPortProp = document.createElement("h3");
+      airPortProp = doc.createElement("h3");
     } else {
-      airPortProp = document.createElement("div");
+      airPortProp = doc.createElement("div");
     }
 
     $(airPortProp)
