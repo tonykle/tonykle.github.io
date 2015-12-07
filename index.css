@@ -12,7 +12,7 @@
 
 html {
 	font-family: Quicksand, sans-serif;
-	color: #777777;
+  color: #777777;
 	opacity: 0.4;
 }
 
@@ -67,6 +67,11 @@ hr {
 	margin-left: auto;
 	clear: right;
 	margin-right: auto;
+}
+
+#projects {
+  text-align: center;
+  width: 30%;
 }
 
 #topsec {
@@ -129,10 +134,14 @@ html {
 	padding-bottom: 70px;
 }
 
-.links {
-	padding-left: 50px;
-}
-
 .descrips {
   text-decoration: underline;
+}
+
+i {
+  color: black;
+}
+
+#p1, #p2, #p3, #p4 {
+  margin-top: 40px;
 }
