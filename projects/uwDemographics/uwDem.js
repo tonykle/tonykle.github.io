@@ -58,10 +58,9 @@
 				// think = translate(x, y)
 				.attr("class", "axis")
 				.attr("transform", "translate(0," + (hTuit - barPadding - 5) + ")");
-
+		let year = docElem.getElementById("year");
 		const test = svg.selectAll("rect")
 		    .on('mouseover', function(dataPoint){
-				  let year = docElem.getElementById("year");
 					switch (dataPoint) {
 						case 4.6:
 							year.innerHTML = "1999";
