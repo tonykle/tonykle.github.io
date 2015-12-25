@@ -1,0 +1,25 @@
+{
+  "name": "tonykle.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio website manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonykle/tonykle.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonykle/tonykle.github.io/issues"
+  },
+  "homepage": "https://github.com/tonykle/tonykle.github.io#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
