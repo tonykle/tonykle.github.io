@@ -6,11 +6,12 @@
 
 (function() {
 	"use strict";
-	const tilePieces = 15;
-	var topB = "300px"; // top value for blank space
-	var leftB = "300px"; // left value for blank space
-	var randomImg = Math.floor((Math.random() * 9) + 1);
-	var doc = document;
+	const TILE_PIECES = 15,
+	      HILIGHT_COLOR = "red";
+	let topB = "300px", // top value for blank space
+	    leftB = "300px", // left value for blank space
+      randomImg = Math.floor((Math.random() * 9) + 1),
+	    doc = document;
 	window.onload = function() {
 		createTiles();
 		doc.getElementById("shufflebutton").onclick = shuffleIt;
@@ -20,7 +21,7 @@
 	function createTiles() {
 		let x = 0;
 		let y = 0;
-		for (let i = 0; i < tilePieces; i++) {
+		for (let i = 0; i < TILE_PIECES; i++) {
 			let newDiv = doc.createElement("div");
 			newDiv.innerHTML = [i + 1];
 			x = parseInt(i % 4);
@@ -40,7 +41,7 @@
 	// this function randomly shuffles all of the puzzle pieces
 	function shuffleIt() {
 		for(let i = 0; i < 1000; i++) {
-			let randTile = Math.floor((Math.random() * tilePieces) + 1); // random # (1-15)
+			let randTile = Math.floor((Math.random() * TILE_PIECES) + 1); // random # (1-15)
 			let piece = doc.getElementById("piece " + randTile); // this is the piece you randomly got
 			let pieceLeft = piece.style.left; // the left val of the randomly selected piece
 			let pieceTop = piece.style.top; // the top val of the randomly selected piece
@@ -77,17 +78,19 @@
 
 	// this function highlights individual tiles and changes the cursor appearance
 	function changeCursorColor() {
-		if (validate(this.style.top, this.style.left)) {
-			this.style.cursor="pointer";
-			this.style.color="red";
-			this.style.borderColor="red";
+		let currStyle = this.style;
+		if (validate(currStyle.top, currStyle.left)) {
+			currStyle.cursor = "pointer";
+			currStyle.color = HILIGHT_COLOR;
+			currStyle.borderColor = HILIGHT_COLOR;
 		}
 	}
 
 	// this function changes the tiles/cursor appearance back to the  default state
 	function changeCursorColorBack() {
-		this.style.cursor="auto";
-		this.style.color="black";
-		this.style.borderColor="black";
+		let currStyle = this.style;
+		currStyle.cursor = "auto";
+		currStyle.color = "black";
+		currStyle.borderColor = "black";
 	}
 })();

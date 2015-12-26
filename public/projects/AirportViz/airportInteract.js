@@ -1,6 +1,7 @@
 'use strict';
 
 const ROW_LENGTH = 3; // how many boxes are to be in each row
+const OUTLINE_COLOR = "#ef3d47"; // color to highlight an airport delay/closure
 let count = 0; // count to create unique IDs and to properly format boxes
 
 $(document).ready(function() {
@@ -28,12 +29,12 @@ function initializeAirports(airportName) {
 // this function creates and uses airport objects to create boxes with live airport information
 function createAirports(data) {
   let airport = {
-    abbrev : data.IATA,
+    abbrev   : data.IATA,
     fullName : data.name,
-    city : data.city,
-    status: data.status.reason.replace(".", ""),
-    temp : data.weather.temp,
-    updated: "Last Updated: " + data.weather.meta.updated
+    city     : data.city,
+    status   : data.status.reason.replace(".", ""),
+    temp     : data.weather.temp,
+    updated  : "Last Updated: " + data.weather.meta.updated
   }
   let doc = document;
   let airportCurr = doc.createElement("div");
@@ -46,7 +47,7 @@ function createAirports(data) {
   // airport box outline becomes thicker and red if there is a delay
   if (airport.status != "No known delays for this airport") {
     $("#" + airport.abbrev + count)
-      .css("outline-color", "#ef3d47")
+      .css("outline-color", OUTLINE_COLOR)
       .css("outline-width", "9px");
   }
 
