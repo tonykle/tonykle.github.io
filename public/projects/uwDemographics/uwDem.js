@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 // Tony Le
 // This JS file provides animation for my bar project
 

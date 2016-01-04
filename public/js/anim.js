@@ -1,9 +1,9 @@
 // This is the JS file I use to make my portfolio interactive.
+/*jshint esnext: true */
 
 (function () {
      $(document).ready(() => {
         $("html").fadeTo(900, 1.0);
-
         $("#linkedin, #res, #github, #uw").mouseenter(function() {
             $(this).fadeTo(100, 0.5);
         }).mouseleave(function () {

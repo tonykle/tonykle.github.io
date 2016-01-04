@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 // Tony Le
 // Desc: This file provides the JavaScript for the fifteen.html file.
 // The JavaScript in this file will make the puzzle interactive. It

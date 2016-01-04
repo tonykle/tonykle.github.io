@@ -11,15 +11,28 @@ module.exports = function(grunt) {
         }]
       }
     },
+    jshint: {
+     files: ['public/js/*.js', 'public/projects/**/*.js'],
+     options: {
+       globals: {
+         jQuery: true
+       }
+     }
+   },
     watch: {
-      js: {
+      css: {
         files: ['public/css/index.css'],
-        tasks: ['cssmin'],
+        tasks: ['cssmin']
+      },
+      js: {
+        files: ['public/js/*.js', 'public/projects/**/*.js'],
+        tasks: ['jshint']
       },
     },
   }
 );
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['cssmin', 'watch']);
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.registerTask('default', ['cssmin', 'watch', 'jshint']);
 };

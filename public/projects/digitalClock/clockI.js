@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 // This JS file is used to create and update the digital clock web application.
 // - Tony Le
 

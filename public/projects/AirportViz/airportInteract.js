@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 'use strict';
 
 const ROW_LENGTH = 3; // how many boxes are to be in each row
