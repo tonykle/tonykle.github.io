@@ -15,23 +15,19 @@ h1 {
 	font-size: 23pt;
 	padding-bottom: 68px;
 	text-decoration: underline;
-	font-weight: 100;
+	font-weight: bold;
 }
 
 html {
-
+  background-color: black;
 	font-family: helvetica;
 	font-weight: 100;
-}
-
-#wireframe {
-
-	font-size: 13pt;
 }
 
 /*includes everything in 'body' except for the wireframe link*/
 h1, #ethnic, #tuition, #sources {
 	text-align: center;
+  color: white;
 }
 
 rect {
@@ -53,8 +49,8 @@ rect:hover {
 }
 
 h2, h3 {
-	font-size: 17pt;
-	font-weight: 100;
+	font-size: 18pt;
+	font-weight: bold;
 }
 
 li {
@@ -130,16 +126,11 @@ li sup {
 a {
 	text-decoration: none;
 
-	font-size: 15pt;
+	font-size: 19pt;
 }
 
 a:visited, a {
 	color: black;
-}
-
-#wireframe, #imageAppear {
-	position: fixed; /*fixed to stay in one place while scrolling*/
-	text-align: left;
 }
 
 #year {

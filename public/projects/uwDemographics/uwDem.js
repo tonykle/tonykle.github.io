@@ -7,7 +7,6 @@
 	"use strict";
 
 	window.onload = function() {
-		change();
 
 		const dataset = [4.6, 4.7, 4.9, 5.5, 5.8, 6.0, 6.1, 6.4, 6.5, 7.0, 7.9, 8.9];
 		const barPadding = 2; // padding between each bar
@@ -20,7 +19,7 @@
 			 .range([barPadding, wTuit - barPadding * 2]);
 		let docElem = document;
 		var svg = d3.select("#barGraphPH")
-					.append("svg") // svg w=500, h=375 ** think of SVG as a blank canvas that you paint on
+					.append("svg") // svg w=500, h=375
 					.attr("width", wTuit)
 					.attr("height", hTuit);
 
@@ -33,7 +32,7 @@
 
 		   // below: 30 used to be 4
 		   .attr("y", d => hTuit - (d * 35)) // makes the graph flip to appear "correct" (instead of upside down)
-		   .attr("fill", d => "black")
+		   .attr("fill", d => "#191970")
 		   .attr("width", wTuit / dataset.length - barPadding)
 		   .attr("height", d => (d * 35) - 10) // how far bars go down, from top to bottom
 
@@ -115,7 +114,7 @@
 		// outer: w/2, inner: w/3 --> DOUGHNUT
 		// outer: w/2, inner: 0 --> regular pie graph
 		const outerRadius = wRace / 2; // outer: w/2, inner: w/3
-		const innerRadius = wRace / 2.9;
+		const innerRadius = wRace / 3;
 		const arc = d3.svg.arc()
 				.innerRadius(innerRadius)
 				.outerRadius(outerRadius);
@@ -189,22 +188,4 @@
 			    $('#race').text(curr); // curr is the changing text
 		    })
 		};
-
-	// stuff below makes wireframe open/close on-hover
-	function change() {
-		wireframe.onmouseover = open;
-		imageAppear.onmouseout = close;
-	}
-
-	// openns the wireframe when text is hovered over
-	function open() {
-	 	docElem.getElementById("imageAppear").src = "http://i.imgur.com/ENNngny.jpg?1";
-	 	docElem.getElementById("wireframe").innerHTML = "";
-	}
-
-	// closes the wireframe when wireframe is no longer hovered over
-	function close() {
-		docElem.getElementById("imageAppear").src = "";
-	  docElem.getElementById("wireframe").innerHTML = "view wireframe here";
-	}
 })();
