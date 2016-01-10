@@ -1,4 +1,26 @@
 /*  This is the CSS files I use to style my portfolios*/
+.numberCircle, .numberCircle2, .numberCircle3, .numberCircle4, .numberCircle5, .numberCircle6  {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border: 2px solid black;
+    font: 28px Helvetica, sans-serif;
+    display:inline-block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.numberCircle, .numberCircle2, .numberCircle3 {
+  background: #E2A819;
+  color: black;
+}
+
+.numberCircle4, .numberCircle5, .numberCircle6 {
+  background: #0fc39e;
+  color: white;
+}
+
 
 @font-face {
   font-family: Quicksand;
@@ -16,7 +38,7 @@ html {
 }
 
 a:visited, link, a:hover, a, html {
-	color: #777777;;
+	color: white;;
 }
 
 a {
@@ -68,12 +90,8 @@ hr {
   width: 30%;
 }
 
-#topsec, i {
-  color: black;
-}
-
 #topsec {
-	font-size: 33pt;
+	font-size: 30pt;
 	font-weight: bold;
 	font-family: Helvetica, serif;
 	text-align: center;
@@ -85,20 +103,24 @@ hr {
 	-ms-user-select: none; /* IE10+ */
 }
 
-#projectsBut, #skillsetBut, #aboutMeBut {
-	font-size: 10.5pt;
+#projectsBut, #aboutMeBut {
+	font-size: 12pt;
   margin:1px;
   text-align:left;
   display:inline-block;
-  margin-right: 9px;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #jobTitle {
 	text-align: center;
-	margin-bottom: 23px;
-  font-size: 14pt;
+  font-size: 22pt;
 }
+
+#jobTitle, #topsec, i, #projectsBut, #aboutMeBut, #aboutMe {
+  color: white;
+    text-decoration: none;
+}
+
 
 #cont {
 	text-align:center;
@@ -112,6 +134,7 @@ html {
 	padding-bottom: 15px;
 	margin-left: auto;
 	margin-right: auto;
+  background-color: black;
 }
 
 #entire {
@@ -133,7 +156,7 @@ html {
 }
 
 .descrips {
-  text-decoration: underline;
+
 }
 
 #p1, #p2, #p3, #p4 {
@@ -147,5 +170,5 @@ html {
 }
 
 #p1, #p2, #p3, #p4 {
-  color: #131313;
+  color: #a6bfc8;
 }
