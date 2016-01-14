@@ -15,4 +15,4 @@ front-end technologies but am willing to work with whatever necessary to get the
 
 ## How I got into Programming
 
-I became interested in programming during my time in college. Out of the computer science courses I took, I was always more interested in the ones that were more front-end oriented. By my the end of my senior year of college, I had research and intern experience involving software. It was then when I transitioned into my career as a full-time developer.
+I became interested in programming during my time in college. Out of the computer science courses I took, I was always more interested in the ones that were more front-end oriented. By the end of my senior year of college, I had research and intern experience involving software. It was then when I transitioned into my career as a full-time developer.
