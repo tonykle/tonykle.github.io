@@ -27,8 +27,8 @@ kramdown:
 # Site owner
 owner:
   name: Tony Le
-  avatar: bio-photo.jpg
-  bio: "Software Engineer based in Seattle"
+  avatar: bio-photo.png
+  bio: "Currently based in Seattle"
   email: tonyl3@uw.edu
   bing-verify:
   github: tonykle
