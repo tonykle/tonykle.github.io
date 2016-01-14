@@ -1,5 +1,5 @@
 ---
 layout: post-index
-title: Projects
-excerpt: "Projects"
+title: Posts
+excerpt: "Posts"
 ---
