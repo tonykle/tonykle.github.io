@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "First Post"
-excerpt: "A post to test this awesome posting"
+title: "Airport Visualization Project"
+excerpt: "An airport information visualizer created using the FAA's API"
 tags: []
 ---
 
-My name is Tony. I love coding, playing tennis, and spending time outdoors. Please refer to my GitHub account to see my projects. They will be posted on this website shortly.
+Here's a link to this project: [link](http://tonykle.github.io/allProjects/AirPortViz).
