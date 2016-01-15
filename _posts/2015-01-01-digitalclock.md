@@ -2,6 +2,7 @@
 layout: post
 title: "Digital Clock"
 excerpt: "A simple digital clock created using jQuery and ES6"
+link: http://tonykle.github.io/allProjects/digitalClock
 tags: []
 ---
 

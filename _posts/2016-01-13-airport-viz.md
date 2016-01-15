@@ -2,6 +2,7 @@
 layout: post
 title: "Airport Visualization Project"
 excerpt: "An airport information visualizer created using the FAA's API"
+link: http://tonykle.github.io/allProjects/AirportViz
 tags: []
 ---
 
