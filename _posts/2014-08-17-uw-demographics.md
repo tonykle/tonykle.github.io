@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UW Demographics"
-excerpt: "Data visualizations based on the University of Washington's statistical data"
+excerpt: "Data visualizations using D3.js based on the University of Washington's statistical data"
 tags: [university of washington, javascript, demographics, diversity]
 ---
 

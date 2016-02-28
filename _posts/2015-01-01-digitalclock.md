@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Digital Clock"
-excerpt: "A simple digital clock created using jQuery and ES6"
+excerpt: "A simple digital clock created using jQuery"
 tags: [clock, javascript]
 ---
 

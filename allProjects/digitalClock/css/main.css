@@ -24,7 +24,7 @@ html {
 /*specify font family*/
 @font-face {
     font-family: RobotoSlab;
-    src: url(../../fonts/RobotoSlab-Thin.ttf);
+    src: url(../fonts/RobotoSlab-Thin.ttf);
 }
 
 #clockContainer {

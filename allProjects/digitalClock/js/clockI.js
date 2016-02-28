@@ -1,4 +1,3 @@
-/*jshint esnext: true */
 // This JS file is used to create and update the digital clock web application.
 // - Tony Le
 
@@ -43,16 +42,15 @@
 
 	// this function creates the circles and fills them depending on
 	function createCircles() {
-		let doc = document;
 		for (let j = 0; j < HEIGHT; j++) {
 			for (let i = 0; i < WIDTH; i++) {
-			  let newTd = doc.createElement("td");
+			  let newTd = document.createElement("td");
 				let newTDName = "td_" + (i + 1); // table data
 
 				$(newTd).attr("id", newTDName);
 				$("#singleRow").append(newTd);
 
-				let newDiv = doc.createElement("div");
+				let newDiv = document.createElement("div");
 				$(newDiv).attr({
 					id: (j + 1) + "_" + (i + 1),
 					class: "circle"
