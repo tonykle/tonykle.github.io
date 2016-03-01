@@ -8,7 +8,7 @@ tags: [javascript, practice, JS, prototypes]
 Here's a link to the github repository: [link](https://github.com/tonykle/JavaScript-Prototype-Functions). My personal implementations of prototype functions in JavaScript. My purpose in this project is to further develop a deeper understanding of how functions work 'under the hood' in JS. Additionally, a number of built-in JS functions have odd or quirky edge cases and implementing through this project is helping me learn and memorize how they work.
 
 {% highlight javascript %}
-/* A personal implementation of JS' prototype substring() function
+/* A personal implementation of JS' prototype substring() function */
 'use strict';
 
 // params: start and ending indexes
