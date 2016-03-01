@@ -8,12 +8,8 @@ tags: [javascript, practice, JS, prototypes]
 Here's a link to the github repository: [link](https://github.com/tonykle/JavaScript-Prototype-Functions). My personal implementations of prototype functions in JavaScript. My purpose in this project is to further develop a deeper understanding of how functions work 'under the hood' in JS. Additionally, a number of built-in JS functions have odd or quirky edge cases and implementing through this project is helping me learn and memorize how they work.
 
 {% highlight javascript %}
+/* A personal implementation of JS' prototype substring() function
 'use strict';
-/*
-Mozilla: "The substring() method returns a subset of a string between one index and another, or
-through the end of the string."
-My personal implementation of the substring() function used for strings in JS.
-*/
 
 // params: start and ending indexes
 String.prototype.substring = function(start, end) {
