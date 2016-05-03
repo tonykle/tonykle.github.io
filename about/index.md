@@ -9,7 +9,7 @@ image:
   credit: WeGraphics
 ---
 
-I am currently working as a Software Engineer at Milliman in Seattle. I primarily enjoy working with
+I am currently working as a Software Engineer at Milliman in Seattle, WA. I primarily enjoy working with
 front-end technologies but am willing to work with whatever necessary to get the job done. I am a graduate of the University of Washington C/O 2015.
 
 
