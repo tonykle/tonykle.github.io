@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fifteen Puzzle"
-excerpt: "A recreation of the 15 puzzle game"
+excerpt: "A recreation of the 15 puzzle game using vanilla JS"
 tags: [javascript, puzzle]
 ---
 

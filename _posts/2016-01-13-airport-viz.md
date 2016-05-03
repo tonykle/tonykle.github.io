@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Airport Visualization Project"
-excerpt: "An airport information visualizer created using the FAA's API"
-tags: [airports, FAA, javascript]
+excerpt: "A simple airport data visualizer developed using React.js, Express, and the FAA's API"
+tags: [airports, FAA, javascript, React]
 ---
 
-Here's a link to this project: [link](http://tonykle.github.io/allProjects/AirportViz).
+Here's a link to the GitHub repo: [link](https://github.com/tonykle/AirportViz).
