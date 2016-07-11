@@ -10,12 +10,12 @@ image:
 ---
 
 I am currently working as a Software Engineer at Milliman in Seattle, WA. I primarily enjoy working with
-front-end technologies but am willing to work with whatever necessary to get the job done. I am a graduate of the University of Washington C/O 2015.
+progressive front-end technologies to create interactive user interfaces. These technologies include, but are not limited to, JavaScript (ES6), React.js, jQuery, Sass, and bundlers like webpack. I also work closely with testing frameworks such as Selenium. I am a graduate of the University of Washington in Seattle, WA.
 
 
 ## How I got into Programming
 
-I became interested in programming during my time in college. I always enjoyed the mixture of creativity and critical thinking required to write code. Out of the computer science courses I took, I was always more interested in the ones that were more front-end oriented. And by the end of college, I had research and intern experience involving software. It was then when I transitioned into my career as a full-time developer.
+I initially became interested in programming during college. I always enjoyed the mixture of creativity and critical thinking required to write code. Out of the computer science courses I took, I was always more interested in the ones that were more front-end oriented. And by the end of college, I had research and intern experience involving software. It was then when I transitioned into my career as a full-time developer.
 
-## Resume
-To get a better understanding of my background, take a look at my [resume](http://tonykle.github.io/other/tonyleresume.pdf).
+## Résumé
+To get a better understanding of my background, please take a look at my [résume](http://tonykle.github.io/other/tonyleresume.pdf).
