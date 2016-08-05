@@ -16,6 +16,3 @@ progressive front-end technologies to create interactive user interfaces. These 
 ## How I got into Programming
 
 I initially became interested in programming during college. I always enjoyed the mixture of creativity and critical thinking required to write code. Out of the computer science courses I took, I was always more interested in the ones that were more front-end oriented. And by the end of college, I had research and intern experience involving software. It was then when I transitioned into my career as a full-time developer.
-
-## Résumé
-To get a better understanding of my background, please take a look at my [résumé](http://tonykle.github.io/other/tonyleresume.pdf).
