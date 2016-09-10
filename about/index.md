@@ -9,8 +9,7 @@ image:
   credit: WeGraphics
 ---
 
-I am currently working as a Software Engineer at Milliman in Seattle, WA. I primarily enjoy working with
-progressive front-end technologies to create interactive user interfaces. These technologies include, but are not limited to, JavaScript (ES6), React.js, jQuery, Sass, and bundlers like webpack. I also work closely with testing frameworks such as Selenium. I am a graduate of the University of Washington in Seattle, WA.
+I am currently working as a Software Engineer at Milliman. I primarily enjoy working with progressive front-end technologies to create interactive web user interfaces. I also enjoy writing tests for the software I create. am a graduate of the University of Washington in Seattle, WA.
 
 
 ## How I got into Programming
