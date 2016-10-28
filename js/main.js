@@ -3,10 +3,9 @@ let doc = document;
 window.onload = () => {
   let images =
   [
-    { url: 'http://i.imgur.com/PInwDSB.jpg?1', locationAndDate: 'San Francisco, CA - 08/15/2016' },
-    { url: 'http://i.imgur.com/wtSdnvZ.jpg', locationAndDate: 'San Francisco, CA - 08/15/2016' },
-    { url: 'http://i.imgur.com/tQaufLI.jpg', locationAndDate: 'San Francisco, CA - 08/14/2016'}
-
+    { url : 'http://i.imgur.com/PInwDSB.jpg?1', locationAndDate : 'San Francisco, CA - 08/15/2016' },
+    { url : 'http://i.imgur.com/wtSdnvZ.jpg', locationAndDate : 'San Francisco, CA - 08/15/2016' },
+    { url : 'http://i.imgur.com/tQaufLI.jpg', locationAndDate : 'San Francisco, CA - 08/14/2016'}
 
   ];
   loadImageLinks(images);

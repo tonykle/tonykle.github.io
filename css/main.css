@@ -4,11 +4,13 @@ html {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-right: 50px;
+  color: #ffb6c1;
+  background-color: black;
 }
 
 #cameraDescrip {
-  margin-bottom: 50px;
-  font-size: 14pt;
+  margin-bottom: 70px;
+  font-size: 9pt;
 }
 
 .allImages {
