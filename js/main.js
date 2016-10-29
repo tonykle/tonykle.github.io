@@ -5,15 +5,15 @@ window.onload = () => {
   [
     { url : 'http://i.imgur.com/PInwDSB.jpg?1',
       location : 'San Francisco, CA',
-      date : '08/15/2016'
+      date : 'August 2016'
     },
     { url : 'http://i.imgur.com/wtSdnvZ.jpg',
       location : 'San Francisco, CA',
-      date : '08/15/2016'
+      date : 'August 2016'
     },
     { url : 'http://i.imgur.com/tQaufLI.jpg',
       location : 'San Francisco, CA',
-      date : '08/14/2016'
+      date : 'August 2016'
     }
   ];
   loadImageLinks();
@@ -21,11 +21,12 @@ window.onload = () => {
   function loadImageLinks() {
     let doc = document;
     let imagesContainer = doc.createElement('div');
+
     images.forEach(imageInfo => {
       let imageContainer = doc.createElement('div');
 
       // Image location
-      let imageLocation= doc.createElement('div');
+      let imageLocation = doc.createElement('div');
       imageLocation.setAttribute('class', 'imageTitles');
       imageLocation.innerHTML = imageInfo.location;
 
