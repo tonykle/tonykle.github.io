@@ -17,7 +17,14 @@ html {
   margin-bottom: 60px;
 }
 
-.imageTitles {
+.imageDates, .imageTitles {
   font-size: 10.5pt;
+}
+
+.imageTitles {
+  margin-bottom: 3px;
+}
+
+.imageDates {
   margin-bottom: 8px;
 }
