@@ -1,5 +1,5 @@
 // all images have width of 800px
-let doc = document;
+
 window.onload = () => {
   let images =
   [
@@ -8,25 +8,29 @@ window.onload = () => {
     { url : 'http://i.imgur.com/tQaufLI.jpg', locationAndDate : 'San Francisco, CA - 08/14/2016'}
 
   ];
-  loadImageLinks(images);
-};
+  loadImageLinks();
 
-function loadImageLinks(images) {
-  let imagesContainer = doc.createElement('div');
-  images.forEach(imageInfo => {
-    let imageContainer = doc.createElement('div');
+  function loadImageLinks() {
+    let doc = document;
+    let imagesContainer = doc.createElement('div');
+    images.forEach(imageInfo => {
+      let imageContainer = doc.createElement('div');
 
-    let imageTitle = doc.createElement('div');
-    imageTitle.setAttribute('class', 'imageTitles');
-    imageTitle.innerHTML = imageInfo.locationAndDate;
-    imagesContainer.appendChild(imageTitle);
+      // Image title
+      let imageTitle = doc.createElement('div');
+      imageTitle.setAttribute('class', 'imageTitles');
+      imageTitle.innerHTML = imageInfo.locationAndDate;
 
-    let image = doc.createElement('img');
-    image.setAttribute('class', 'allImages');
+      // Image itself
+      let image = doc.createElement('img');
+      image.setAttribute('class', 'allImages');
+      image.setAttribute('src', imageInfo.url);
+      image.setAttribute('alt', 'image-' + imageInfo.locationAndDate);
 
-    image.setAttribute('src', imageInfo.url);
-    image.setAttribute('alt', 'image-' + imageInfo.locationAndDate);
-    imagesContainer.appendChild(image);
-  });
-  doc.getElementById('content').appendChild(imagesContainer);
+      // Append everything
+      imagesContainer.appendChild(imageTitle);
+      imagesContainer.appendChild(image);
+    });
+    doc.getElementById('content').appendChild(imagesContainer);
+  };
 };
