@@ -10,7 +10,15 @@ hr {
   width: 7%;
   margin-bottom: 30px;
   margin-top: 30px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #E6E6FA;
+}
+
+.fa {
+  color: #999999;
+}
+
+.fa:hover {
+  color: #2C81B6;
 }
 
 #intro {
@@ -21,35 +29,10 @@ hr {
   margin-right: auto;
 }
 
-a {
-  text-decoration: none
-}
-
 #envelope {
-  margin-right: 5px;
+  margin-right: 15px;
 }
 
 #contact {
   text-align: center;
-}
-
-#cameraDescrip {
-  margin-bottom: 70px;
-  font-size: 9pt;
-}
-
-.allImages {
-  margin-bottom: 60px;
-}
-
-.imageDates, .imageTitles {
-  font-size: 10.5pt;
-}
-
-.imageTitles {
-  margin-bottom: 3px;
-}
-
-.imageDates {
-  margin-bottom: 8px;
 }
