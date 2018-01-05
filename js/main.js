@@ -5,6 +5,6 @@ window.onload = () => {
   }
   let linkedinlogo = document.getElementById('linkedinlogo');
   linkedinlogo.onclick = () => {
-    window.location.href = "www.linkedin.com/in/tony-le-01140b79";
+    location.href = "http://www.linkedin.com/in/tony-le-01140b79";
   }
 };
