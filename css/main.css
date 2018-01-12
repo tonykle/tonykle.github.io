@@ -1,9 +1,6 @@
 html {
   font-family: Helvetica;
-  margin-left: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px;
+  margin: 50px 50px 50px 50px;
 }
 
 hr {
@@ -21,9 +18,12 @@ hr {
   color: #2C81B6;
 }
 
+#intro, #contact, #date {
+  text-align: center;
+}
+
 #intro {
   font-size: 22pt;
-  text-align: center;
   width: 45%;
   margin-left: auto;
   margin-right: auto;
@@ -33,6 +33,7 @@ hr {
   margin-right: 15px;
 }
 
-#contact {
-  text-align: center;
+#date {
+  font-size: 8pt;
+  font-weight: bold;
 }
