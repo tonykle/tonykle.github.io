@@ -18,12 +18,12 @@ hr {
   color: #2C81B6;
 }
 
-#intro, #contact, #date {
+#intro, #contact, #date, #weather {
   text-align: center;
 }
 
 #intro {
-  font-size: 22pt;
+  font-size: 17pt;
   width: 45%;
   margin-left: auto;
   margin-right: auto;
@@ -33,7 +33,14 @@ hr {
   margin-right: 15px;
 }
 
-#date {
-  font-size: 8pt;
+#weather, #date {
   font-weight: bold;
+}
+
+#weather {
+  font-size: 9pt;
+}
+
+#date {
+  font-size: 7.5pt;
 }
