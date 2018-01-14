@@ -23,7 +23,7 @@ window.onload = () => {
   // Invoking Open Weather Map's API to retrieve weather statistics in NYC
   $.ajax({
     type: 'GET',
-    url: 'http://api.openweathermap.org/data/2.5/weather?id=5128581&units=imperial&APPID=a40b4ca7691175cf366fcb7e19a3fbde',
+    url: 'https://api.openweathermap.org/data/2.5/weather?id=5128581&units=imperial&APPID=a40b4ca7691175cf366fcb7e19a3fbde',
     dataType: 'json',
     success: getWeatherDetails
   });
