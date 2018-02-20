@@ -11,13 +11,19 @@ window.onload = () => {
 
   // date appendage
   let date = new Date();
-  let month = (function() {
-    if (date.getMonth() < 10) {
-      return '0' + (date.getMonth() + 1);
-    }
-    return date.getMonth();
-  })();
-  let fullDate = month + '.' + date.getDate();
+
+  // adds a '0' in front of a given date value (month or day) if the value is under 10
+  function addZero(typeOfDate, date) {
+      if (date < 10) {
+        if (typeOfDate === 'day') {
+          return '0' + date;
+        } else if (typeOfDate === 'month') {
+          return '0' + (date + 1);
+        }
+      }
+      return date;
+  };
+  let fullDate = addZero('month', date.getMonth()) + '.' + addZero('day', date.getDate());
   document.getElementById('date').innerHTML = fullDate;
 
   // Invoking Open Weather Map's API to retrieve weather statistics in NYC
@@ -25,7 +31,10 @@ window.onload = () => {
     type: 'GET',
     url: 'https://api.openweathermap.org/data/2.5/weather?id=5128581&units=imperial&APPID=a40b4ca7691175cf366fcb7e19a3fbde',
     dataType: 'json',
-    success: getWeatherDetails
+    success: getWeatherDetails,
+    error: function(errorMessage, status, typeOfError) {
+      console.log('error! : ' + errorMessage + ' ' + status + ' ' + typeOfError);
+    }
   });
 
   // Parse API response for degrees fahrenheit in NYC

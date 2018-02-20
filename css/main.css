@@ -22,6 +22,13 @@ hr {
   text-align: center;
 }
 
+#mugshot {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 50%;
+}
+
 #intro {
   font-size: 17pt;
   width: 45%;
@@ -37,10 +44,6 @@ hr {
   font-weight: bold;
 }
 
-#weather {
+#weather, #date {
   font-size: 9pt;
-}
-
-#date {
-  font-size: 7.5pt;
 }
